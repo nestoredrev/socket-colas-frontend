@@ -1,0 +1,44 @@
+<div class="container">
+    <h1>Programa de colas</h1>
+    <div class="row">
+        <div class="col-4">
+            <button mat-raised-button 
+                    color="primary" 
+                    class="mr-2"
+                    routerLink="/pantalla"
+                    >
+                    Pantalla publica
+            </button>
+            <button mat-raised-button 
+                    color="accent"
+                    routerLink="/nuevoTiket"
+                    >
+                    Crear ticket
+            </button>
+        </div>
+        <div class="col-4">
+            <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+                <mat-form-field appearance="fill" class="myFormField">
+                    <mat-label>Ingresar mesa</mat-label>
+                    <input matInput 
+                           type="number"
+                           name="mesa"
+                           [(ngModel)]="data.mesa"
+                           pattern="\d{1,5}"
+                           #mesa="ngModel">
+                           <mat-hint>5 digitos</mat-hint>
+
+                           <mat-error *ngIf="mesa.hasError('pattern') && mesa.touched">
+                            <strong>Solo 5 digitos</strong>
+                          </mat-error>
+                </mat-form-field>
+                <br><br>
+                <button mat-raised-button color="warn" type="submit" [disabled]="f.invalid || data.mesa === null">Ingresar</button>
+            </form>
+        </div>
+        <div class="col-4">
+            <h1>La mesa {{ escritorio }}</h1>
+            <h2>Atiente el {{ ticket }} </h2>
+        </div>
+    </div>
+</div>

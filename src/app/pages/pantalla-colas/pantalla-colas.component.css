@@ -1,0 +1,52 @@
+.row{
+    height: 100%;
+    width: 100%;
+}
+
+.pantalla{
+    background-color: #6951F0;
+    color: white;
+}
+
+.contenedorPantalla{
+    text-align: center;
+    position: relative;
+    top: 40%;
+}
+
+.cola{
+    text-align: center;
+    background-color: #090956;
+    color: white;
+}
+
+.contenedorCola{
+    top: 10%;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+
+.ticket-actual {
+    background-color: #282828;
+}
+
+.ticket-actual-numero {
+    font-size: 80px;
+}
+
+.ticket-actual-escritorio {
+    font-size: 45px;
+}
+
+.ticket-secundario {
+    font-size: 25px;
+}
+
+
+/* Nuevo-ticket */
+
+#lblNuevoTicket {
+    font-size: 70px;
+}
+

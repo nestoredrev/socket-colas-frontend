@@ -1,0 +1,19 @@
+<div class="row">
+    <!-- Pantalla principal -->
+    <div class="col-10 pantalla">
+        <div class="contenedorPantalla">
+            <span id="lblTicket1" class="ticket-actual-numero" *ngIf="ticketActual">Ticket {{ ticketActual.numero || 'Cargando...' }}</span>
+            <br>
+            <span id="lblEscritorio1" class="ticket-actual-escritorio" *ngIf="ticketActual" >Mesa {{ ticketActual.escritorio || 'Cargando...' }}</span>
+        </div>
+    </div>
+    
+    <!-- Cola -->
+    <div class="col-2 cola">
+        <div class="contenedorCola"  *ngFor="let ticket of tickets; let i = index">
+            <span id="lblTicket{{i}}" class="ticket-secundario">Ticket {{ ticket.numero }}</span>
+            <br>
+            <span id="lblEscritorio{{i}}">Escritorio {{ ticket.escritorio }}</span>
+        </div>
+    </div>
+</div>
